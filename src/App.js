@@ -14,7 +14,7 @@ function App() {
   console.log(token);
 
 
-  if (!token) {
+  if (!token || token === undefined) {
     return <Login setToken={setToken} />
   }
 
