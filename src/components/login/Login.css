@@ -91,3 +91,8 @@ input {
 .login__button:hover {
   background-color: var(--first-color-darker);
 }
+
+.login__loading {
+  font-size: var(--small-font-size);
+  color: red;
+}

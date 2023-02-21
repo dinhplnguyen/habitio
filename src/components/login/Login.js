@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import './Login.css';
 
-async function loginUser(credentials) {
+async function LoginUser(credentials, setLoadingMessage) {
+
   return await fetch('https://habits-tracker-dinhplnguyen.vercel.app/login', {
     method: 'POST',
     headers: {
@@ -11,18 +12,18 @@ async function loginUser(credentials) {
     },
     body: JSON.stringify(credentials)
   })
-    .then(handleError)
+    .then(response => checkRepsonse(response, setLoadingMessage))
     .then(data => data.json())
-    .catch(err => { throw Error(err) })
+    .catch(err =>
+      setLoadingMessage("Invalid username or password")
+    )
 }
 
-async function handleError(response) {
+async function checkRepsonse(response, setLoadingMessage) {
   if (!response.ok) {
-    console.log("response: ", response);
-    window.alert("Invalid username or password");
+    setLoadingMessage("Invalid username or password");
     throw Error(response.statusText);
   }
-  console.log("response: ", response);
   window.alert("Login successful");
   return response;
 }
@@ -31,20 +32,27 @@ export default function Login({ setToken }) {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [loading, setLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState("Loading...");
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const token = await loginUser({
+    setLoading(true);
+    setLoadingMessage("Loading...");
+
+    const token = await LoginUser({
       email,
       password
-    });
+    }, setLoadingMessage);
 
-    if (token === undefined) {
-      console.log("token is undefined");
-      return;
+    try {
+      if (token === undefined) {
+        throw Error("Invalid username or password");
+      }
+      await setToken(token?.data);
+    } catch (err) {
+      setLoadingMessage("Invalid username or password");
     }
-    await setToken(token?.data);
-    window.location.href = "/";
   }
 
   return (
@@ -71,9 +79,9 @@ export default function Login({ setToken }) {
 
             <button className="login__button" type="submit">Login</button>
 
+            <p className="login__loading">{loading ? loadingMessage : null}</p>
 
           </form>
-
         </div>
       </div>
     </>
