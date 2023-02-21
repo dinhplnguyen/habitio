@@ -3,27 +3,26 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom'
 
-import Login from './components/login/Login';
-import Token from './components/Token';
+import { Login, Signup } from './pages';
+
+import getToken from './utils/getToken';
 import Dashboard from './components/dashboard';
 
 function App() {
 
-  const { token, setToken } = Token();
-  // const [token, setToken] = useState();
-  console.log(token);
+  const { token, setToken } = getToken();
 
-
-  if (!token || token === undefined) {
-    return <Login setToken={setToken} />
-  }
+  // if (!token || token === undefined) {
+  //   return <Login setToken={setToken} />
+  // }
 
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Login setToken={setToken} />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<>Wrong way there, bud<p>sdfa</p></>} />
         </Routes>
       </Router>

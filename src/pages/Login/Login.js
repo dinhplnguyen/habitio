@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './Login.css';
+import { LoginForm } from '../../features';
 
 async function LoginUser(credentials, setLoadingMessage) {
 
@@ -60,28 +61,14 @@ export default function Login({ setToken }) {
       <div className="login">
         <div className="login__content">
 
-          <form onSubmit={handleSubmit} className="login__form">
-            <h1>Login</h1>
+          <LoginForm
+            handleSubmit={handleSubmit}
+            setEmail={setEmail}
+            setPassword={setPassword}
+            loading={loading}
+            loadingMessage={loadingMessage}
+          />
 
-            <div className="input__field">
-              <label>
-                <input type="email" className="login__input" placeholder="Email" onChange={e => setEmail(e.target.value)} />
-              </label>
-            </div>
-
-            <div className="input__field">
-              <label>
-                <input type="password" className="login__input" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-              </label>
-            </div>
-
-            <a href="/forgot" className="login__forgot">Forgot password?</a>
-
-            <button className="login__button" type="submit">Login</button>
-
-            <p className="login__loading">{loading ? loadingMessage : null}</p>
-
-          </form>
         </div>
       </div>
     </>
