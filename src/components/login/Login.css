@@ -1,0 +1,93 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+  --first-color: #dbc7e6;
+  --first-color-dark: #bfa4d1;
+  --first-color-darker: #a78dbd;
+  --first-color-darkest: #8f6ea1;
+  --first-color-light: #e6d9f0;
+  --first-color-lighter: #f0eaf6;
+  --first-color-lighten: #f6f0f9;
+
+  /*=== Font and typography ===*/
+  --body-font: "Open Sans", sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.8rem;
+  --big-font-size: 2rem;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--first-color-lighten);
+  margin: 0;
+  padding: 0;
+}
+
+/*=== LOGIN ===*/
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.login__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color-light);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.input__field {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+}
+
+input {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 10rem;
+  background-color: white;
+  outline: none;
+}
+
+.login__forgot {
+  text-align: right;
+  width: 100%;
+  font-size: var(--small-font-size);
+  color: var(--first-color-darkest);
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-bottom: 0.5rem;
+  padding-right: 22px;
+}
+
+.login__button {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  outline: none;
+  color: white;
+  background-color: var(--first-color-dark);
+  transition: 0.3s ease;
+}
+
+.login__button:hover {
+  background-color: var(--first-color-darker);
+}

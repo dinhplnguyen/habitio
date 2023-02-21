@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import './Login.css';
+
 async function loginUser(credentials) {
   return await fetch('https://habits-tracker-dinhplnguyen.vercel.app/login', {
     method: 'POST',
@@ -46,22 +48,35 @@ export default function Login({ setToken }) {
   }
 
   return (
-    <div className="login-wrapper">
-      <h1>Please Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setEmail(e.target.value)} />
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
-        </label>
-        <div>
-          <button type="submit">Submit</button>
+    <>
+      <div className="login">
+        <div className="login__content">
+
+          <form onSubmit={handleSubmit} className="login__form">
+            <h1>Login</h1>
+
+            <div className="input__field">
+              <label>
+                <input type="email" className="login__input" placeholder="Email" onChange={e => setEmail(e.target.value)} />
+              </label>
+            </div>
+
+            <div className="input__field">
+              <label>
+                <input type="password" className="login__input" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+              </label>
+            </div>
+
+            <a href="/forgot" className="login__forgot">Forgot password?</a>
+
+            <button className="login__button" type="submit">Login</button>
+
+
+          </form>
+
         </div>
-      </form>
-    </div>
+      </div>
+    </>
   )
 }
 
