@@ -38,11 +38,12 @@
 .login__input {
   width: 80%;
   padding: 12px 20px;
+  font-size: var(--normal-font-size);
 }
 
 .login__signup {
   text-align: center;
-  font-size: var(--small-font-size);
+  /* font-size: var(--small-font-size); */
   color: var(--first-color-darkest);
   text-decoration: none;
   transition: 0.3s ease;

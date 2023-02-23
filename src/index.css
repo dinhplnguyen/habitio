@@ -14,15 +14,17 @@
 
   /*=== Font and typography ===*/
   --body-font: "Open Sans", sans-serif;
-  --h1-font-size: 1.5rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.8rem;
+  --h1-font-size: 1.7rem;
+  --normal-font-size: 1.2rem;
+  --small-font-size: 1rem;
   --big-font-size: 2rem;
 }
 
 body {
   font-family: var(--body-font);
   background-color: var(--first-color);
+  font-size: var(--normal-font-size);
+
   /* margin: 0;
   padding: 0; */
 }
