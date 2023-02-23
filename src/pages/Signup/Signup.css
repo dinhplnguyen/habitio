@@ -1,5 +1,4 @@
-/*=== LOGIN ===*/
-.login {
+/* .login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +34,6 @@
 
 .login__signup {
   text-align: center;
-  /* width: 100%; */
   font-size: var(--small-font-size);
   color: var(--first-color-darkest);
   text-decoration: none;
@@ -63,4 +61,4 @@
   margin: 0;
   font-size: var(--small-font-size);
   color: red;
-}
+} */

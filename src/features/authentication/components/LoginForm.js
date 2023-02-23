@@ -14,6 +14,7 @@ export default function LoginForm({
 
         <InputField
           type="email"
+          label="login__label"
           className="login__input"
           placeholder="Email"
           onChange={setEmail}
@@ -21,6 +22,7 @@ export default function LoginForm({
 
         <InputField
           type="password"
+          label="login__label"
           className="login__input"
           placeholder="Password"
           onChange={setPassword}
@@ -31,6 +33,7 @@ export default function LoginForm({
         <Button className="login__button" type="submit">Login</Button>
 
         <p className="login__loading">{loading ? loadingMessage : null}</p>
+        <hr className="login__line"></hr>
 
         <a href="/signup" className="login__signup">Create new account</a>
 

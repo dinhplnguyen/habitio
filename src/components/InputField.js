@@ -1,10 +1,10 @@
 export default function InputField({
-  type, className, placeholder, onChange
+  type, label, className, placeholder, onChange
 }) {
   return (
     <>
       <div className="input__field">
-        <label>
+        <label className={label}>
           <input
             type={type}
             className={className}
