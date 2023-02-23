@@ -66,6 +66,7 @@
   width: 40%;
   padding: 10px 20px;
   margin: 0;
+  font-size: var(--normal-font-size);
 }
 
 hr.login__line {
