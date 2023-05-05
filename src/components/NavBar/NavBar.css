@@ -1,0 +1,32 @@
+.navbar__main {
+  background-color: var(--first-color-lighter);
+  padding: 0.5rem 1rem;
+}
+
+.navbar__container {
+  background-color: var(--first-color-lighter);
+}
+
+.navbar__brand {
+  font-size: var(--medium-font-size);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: var(--letter-spacing-medium);
+}
+
+.navbar__nav {
+  padding: 0 !important;
+}
+
+.navbar__button {
+  /* margin-left: 0.5rem; */
+  padding: 0.5rem 1rem;
+}
+
+.navbar__a {
+  font-size: var(--normal-font-size);
+  letter-spacing: var(--letter-spacing-small);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}

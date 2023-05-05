@@ -17,7 +17,19 @@
   --h1-font-size: 1.7rem;
   --normal-font-size: 1.2rem;
   --small-font-size: 1rem;
+  --medium-font-size: 1.5rem;
   --big-font-size: 2rem;
+
+  /*=== Font weight ===*/
+  --font-medium: 600;
+  --font-semi-bold: 700;
+  --font-bold: 800;
+
+  /*=== Letter spacing ===*/
+  --letter-spacing: 1px;
+  --letter-spacing-small: 0.5px;
+  --letter-spacing-medium: 1.5px;
+  --letter-spacing-big: 2px;
 }
 
 body {
@@ -45,7 +57,6 @@ button {
   outline: none;
   color: white;
   background-color: var(--first-color-dark);
-  transition: 0.3s ease;
 }
 
 button:hover {
@@ -54,4 +65,14 @@ button:hover {
 
 button:active {
   background-color: var(--first-color-darkest);
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--normal-font-size);
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
 }
