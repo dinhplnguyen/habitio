@@ -1,6 +1,7 @@
 .navbar__main {
   background-color: var(--first-color-lighter);
   padding: 0.5rem 1rem;
+  /* border-radius: 1.5em; */
 }
 
 .navbar__container {
@@ -29,4 +30,15 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+.navbar__offcanvas__body {
+  background-color: var(--first-color-lighter);
+}
+
+.navbar__title {
+  font-size: var(--medium-font-size);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: var(--letter-spacing-big);
+  color: var(--first-color-dark);
 }

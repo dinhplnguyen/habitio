@@ -7,15 +7,18 @@ export default function Menu() {
       // id={`offcanvasNavbar-expand-${expand}`}
       // aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
       placement="end"
+      className="navbar__offcanvas__body"
     >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>
-          Power by Tristix
+          <p className="navbar__title">
+            Powered by Tristix
+          </p>
         </Offcanvas.Title>
       </Offcanvas.Header>
 
 
-      <Offcanvas.Body className="d-flex flex-row align-items-end">
+      <Offcanvas.Body className="d-flex flex-row align-items-start ">
         <Nav className="justify-content-end flex-grow-1 pe-3 navbar__nav">
           <Nav.Link href="#action2">Our Team</Nav.Link>
           {/* <Divider variant="fullWidth" orientation="vertical" flexItem /> */}

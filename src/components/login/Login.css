@@ -37,7 +37,6 @@
   font-size: var(--small-font-size);
   color: var(--first-color-darkest);
   text-decoration: none;
-  transition: 0.3s ease;
   margin-top: 1rem;
 }
 
