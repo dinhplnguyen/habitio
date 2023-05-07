@@ -1,5 +1,5 @@
 export default function InputField({
-  type, label, className, placeholder, onChange
+  type, label, className, placeholder, onChange, required
 }) {
   return (
     <>
@@ -10,6 +10,7 @@ export default function InputField({
             className={className}
             placeholder={placeholder}
             onChange={e => onChange(e.target.value)}
+            required={required}
           />
         </label>
       </div>

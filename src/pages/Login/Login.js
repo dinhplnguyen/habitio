@@ -51,9 +51,13 @@ export default function Login({ setToken }) {
         throw Error("Invalid username or password");
       }
       await setToken(token?.data);
+      setLoading(false);
+      window.location.href = "/";
     } catch (err) {
       setLoadingMessage("Invalid username or password");
     }
+
+
   }
 
   return (

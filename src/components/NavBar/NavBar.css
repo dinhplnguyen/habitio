@@ -14,31 +14,6 @@
   letter-spacing: var(--letter-spacing-medium);
 }
 
-.navbar__nav {
-  padding: 0 !important;
-}
-
-.navbar__button {
-  /* margin-left: 0.5rem; */
-  padding: 0.5rem 1rem;
-}
-
-.navbar__a {
-  font-size: var(--normal-font-size);
-  letter-spacing: var(--letter-spacing-small);
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
 .navbar__offcanvas__body {
   background-color: var(--first-color-lighter);
-}
-
-.navbar__title {
-  font-size: var(--medium-font-size);
-  font-weight: var(--font-semi-bold);
-  letter-spacing: var(--letter-spacing-big);
-  color: var(--first-color-dark);
 }

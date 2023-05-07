@@ -18,6 +18,7 @@ export default function LoginForm({
           className="login__input"
           placeholder="Email"
           onChange={setEmail}
+          required={true}
         />
 
         <InputField
@@ -26,6 +27,7 @@ export default function LoginForm({
           className="login__input"
           placeholder="Password"
           onChange={setPassword}
+          required={true}
         />
 
         <a href="/forgot" className="login__forgot">Forgot password?</a>

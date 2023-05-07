@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom'
 
 import { Landing, Login, Signup } from './pages';
+import Logout from './components/Logout';
 
 import getToken from './utils/getToken';
 import Dashboard from './components/dashboard';
@@ -12,9 +13,25 @@ function App() {
 
   const { token, setToken } = getToken();
 
-  // if (!token || token === undefined) {
-  //   return <Login setToken={setToken} />
-  // }
+  if (token) {
+    return (
+      <>
+        <Router>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Dashboard />
+                <Logout setToken={setToken} />
+              </>
+
+            } />
+            <Route path="*" element={<>Wrong way there, bud<p>sdfa</p></>} />
+          </Routes>
+        </Router>
+      </>
+    );
+  }
+
 
 
   return (

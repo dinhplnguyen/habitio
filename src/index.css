@@ -30,6 +30,10 @@
   --letter-spacing-small: 0.5px;
   --letter-spacing-medium: 1.5px;
   --letter-spacing-big: 2px;
+
+  /*=== Border Radius ===*/
+  --border-radius: 0.5rem;
+  --border-radius-button: 30px;
 }
 
 body {
@@ -51,20 +55,20 @@ input {
 }
 
 button {
-  border: none;
-  border-radius: 30px;
-
-  outline: none;
-  color: white;
-  background-color: var(--first-color-dark);
+  border: none !important;
+  border-radius: var(--border-radius-button) !important;
+  font-size: var(--normal-font-size) !important;
+  outline: none !important;
+  color: white !important;
+  background-color: var(--first-color-dark) !important;
 }
 
 button:hover {
-  background-color: var(--first-color-darker);
+  background-color: var(--first-color-darker) !important;
 }
 
 button:active {
-  background-color: var(--first-color-darkest);
+  background-color: var(--first-color-darkest) !important;
 }
 
 a {
