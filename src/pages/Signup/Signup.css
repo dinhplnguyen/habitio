@@ -1,64 +1,39 @@
-/* .login {
+.signup {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 90vh;
 }
 
-.login__content {
+.signup__content {
   display: flex;
-  flex-direction: column;
+  width: 90vw;
 }
 
-.login__form {
+.signup__form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: var(--first-color-lighter);
   border-radius: 10px;
+  width: inherit;
   padding: 20px;
 }
 
-.input__field {
+.signup__label {
   display: flex;
-  align-items: center;
-  padding: 10px;
-  border: none;
+  justify-content: center;
+  width: inherit;
+  padding: 10px 10px;
 }
 
-.login__input {
+.signup__input {
+  width: 80%;
+  padding: 12px 20px;
+  font-size: var(--normal-font-size);
+}
+
+.signup__button {
+  width: 40%;
   padding: 10px 20px;
-  width: 10rem;
-}
-
-.login__signup {
-  text-align: center;
-  font-size: var(--small-font-size);
-  color: var(--first-color-darkest);
-  text-decoration: none;
-  transition: 0.3s ease;
-  margin-top: 1rem;
-}
-
-.login__forgot {
-  text-align: right;
-  width: 100%;
-  font-size: var(--small-font-size);
-  color: var(--first-color-darkest);
-  text-decoration: none;
-  transition: 0.3s ease;
-  margin-bottom: 0.5rem;
-  padding-right: 22px;
-}
-
-.login__button {
-  padding: 10px 20px;
-  margin: 10px 0;
-}
-
-.login__loading {
   margin: 0;
-  font-size: var(--small-font-size);
-  color: red;
-} */
+  font-size: var(--normal-font-size);
+}

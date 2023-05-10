@@ -12,40 +12,48 @@ export default function Signup({
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="login__form">
-        <h1>Login</h1>
+      <form onSubmit={handleSubmit} className="signup__form">
+        <h1>Welcome!</h1>
 
         <InputField
           type="text"
-          className="login__input"
+          label="signup__label"
+          className="signup__input"
           placeholder="First Name"
           onChange={setFirstName}
+          required={true}
+        />
+
+        <InputField
+          type="text"
+          label="signup__label"
+          className="signup__input"
+          placeholder="Last Name"
+          onChange={setLastName}
+          required={true}
         />
 
         <InputField
           type="email"
-          className="login__input"
+          label="signup__label"
+          className="signup__input"
           placeholder="Last Name"
           onChange={setEmail}
-        />
-
-        <InputField
-          type="text"
-          className="login__input"
-          placeholder="Last Name"
-          onChange={setLastName}
+          required={true}
         />
 
         <InputField
           type="password"
-          className="login__input"
+          label="signup__label"
+          className="signup__input"
           placeholder="Password"
           onChange={setPassword}
+          required={true}
         />
 
-        <Button className="login__button" type="submit">Login</Button>
+        <Button className="signup__button" type="submit">Register</Button>
 
-        <p className="login__loading">{loading ? loadingMessage : null}</p>
+        <p className="signup__loading">{loading ? loadingMessage : null}</p>
       </form>
     </>
   );

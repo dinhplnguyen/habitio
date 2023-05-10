@@ -13,17 +13,17 @@ async function LoginUser(credentials, setLoadingMessage) {
     },
     body: JSON.stringify(credentials)
   })
-    .then(response => checkRepsonse(response, setLoadingMessage))
+    // .then(response => checkRepsonse(response, setLoadingMessage))
     .then(data => data.json())
     .catch(err =>
-      setLoadingMessage("Invalid username or password")
+      setLoadingMessage("Invalid username or password???")
     )
 }
 
 async function checkRepsonse(response, setLoadingMessage) {
   if (!response.ok) {
-    setLoadingMessage("Invalid username or password");
-    throw Error(response.statusText);
+    await setLoadingMessage("User not found");
+    throw Error(response.message);
   }
   window.alert("Login successful");
   return response;
@@ -41,20 +41,20 @@ export default function Login({ setToken }) {
     setLoading(true);
     setLoadingMessage("Loading...");
 
-    const token = await LoginUser({
+    const user = await LoginUser({
       email,
       password
     }, setLoadingMessage);
 
     try {
-      if (token === undefined) {
-        throw Error("Invalid username or password");
-      }
-      await setToken(token?.data);
+      console.log(user, user.error);
+
+      if (user.error) throw Error(user.error);
+      await setToken(user?.data);
       setLoading(false);
       window.location.href = "/";
     } catch (err) {
-      setLoadingMessage("Invalid username or password");
+      setLoadingMessage(err.message);
     }
 
 

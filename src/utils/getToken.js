@@ -11,6 +11,9 @@ export default function GetToken() {
   const [token, setToken] = useState(getToken());
 
   const saveToken = userToken => {
+    if (userToken === undefined) {
+      throw Error("Tried to save undefined token");
+    }
     sessionStorage.setItem('token', JSON.stringify(userToken));
     setToken(userToken);
   }

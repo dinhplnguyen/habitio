@@ -10,7 +10,7 @@ export default function LoginForm({
   return (
     <>
       <form onSubmit={handleSubmit} className="login__form">
-        <h1>Login</h1>
+        <h1>Welcome back!</h1>
 
         <InputField
           type="email"
