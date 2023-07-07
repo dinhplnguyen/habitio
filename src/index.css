@@ -1,5 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -13,8 +13,10 @@
   --first-color-lighten: #f6f0f9;
 
   /*=== Font and typography ===*/
-  --body-font: "Open Sans", sans-serif;
-  --h1-font-size: 1.7rem;
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
   --normal-font-size: 1.2rem;
   --small-font-size: 1rem;
   --medium-font-size: 1.5rem;
@@ -34,6 +36,13 @@
   /*=== Border Radius ===*/
   --border-radius: 0.5rem;
   --border-radius-button: 30px;
+
+  /*========== Margenes ==========*/
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
 }
 
 body {
@@ -79,4 +88,14 @@ a {
 
 a:hover {
   color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }

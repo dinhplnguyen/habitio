@@ -4,6 +4,7 @@ import Brand from "./Brand";
 import Menu from "./Menu";
 import NavBar from "./NavBar/NavBar";
 import Title from "./Title";
+import Home from "./Home/Home";
 
 export {
   InputField,
@@ -12,4 +13,5 @@ export {
   Menu,
   NavBar,
   Title,
+  Home,
 }
