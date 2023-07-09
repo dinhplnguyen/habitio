@@ -75,8 +75,6 @@ export default function Signup() {
             setLastName={setLastName}
             setEmail={setEmail}
             setPassword={setPassword}
-
-
           />
         </div>
       </div>

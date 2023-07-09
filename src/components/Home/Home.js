@@ -17,8 +17,8 @@ export default function Home() {
           <h1 className="home__title">Form and Track <br /> Your Habits</h1>
           <p className="home__description">Create and track your daily routines,
             making it effortless to build positive habits and break free from negative ones</p>
-          <a href="/login" className="button button--flex">
-            Get Started <i className="uil uil-arrow-right button__icon"></i>
+          <a href="/login" className="home__button button--flex">
+            Get Started
           </a>
         </div>
       </div>

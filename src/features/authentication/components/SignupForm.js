@@ -37,7 +37,7 @@ export default function Signup({
           type="email"
           label="signup__label"
           className="signup__input"
-          placeholder="Last Name"
+          placeholder="Email"
           onChange={setEmail}
           required={true}
         />
@@ -51,9 +51,12 @@ export default function Signup({
           required={true}
         />
 
-        <Button className="signup__button" type="submit">Register</Button>
+        <Button className="signup__button" type="submit">Sign Up</Button>
 
         <p className="signup__loading">{loading ? loadingMessage : null}</p>
+        <hr className="signup__line"></hr>
+
+        <a href="/login" className="signup__login">Login to existing account</a>
       </form>
     </>
   );

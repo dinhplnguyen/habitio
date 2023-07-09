@@ -54,20 +54,26 @@
   text-decoration: none;
   /* margin-bottom: 0.5rem;
   padding-right: 22px; */
-  padding: 0 0 20px 0;
+  /* padding: 0 0 20px 0; */
 }
 
 .login__button {
   width: 40%;
   padding: 10px 20px;
   margin: 0;
+  margin-top: 1rem;
   font-size: var(--normal-font-size);
 }
 
 hr.login__line {
-  margin: 1rem 0 1rem 0;
+  /* margin: 1rem 0 1rem 0;
   border-top: 1px solid var(--first-color);
+  width: 100%; */
   width: 100%;
+  margin: 0;
+  margin: 1rem 0 1rem 0;
+  border: 0;
+  border-top: 1px solid var(--first-color-dark);
 }
 
 .login__loading {
