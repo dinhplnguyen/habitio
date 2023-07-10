@@ -49,6 +49,7 @@
 
 .active {
   color: var(--first-color-darker);
+  outline: none;
 }
 
 .nav__name {
