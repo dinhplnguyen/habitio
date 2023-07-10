@@ -7,7 +7,8 @@ import { Landing, Login, Signup } from './pages';
 import Logout from './components/Logout';
 
 import getToken from './utils/getToken';
-import Dashboard from './components/dashboard';
+
+import { Today, UserNavBar } from './components';
 
 function App() {
 
@@ -20,8 +21,8 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
-                <Dashboard />
                 <Logout setToken={setToken} />
+                <UserNavBar />
               </>
 
             } />
