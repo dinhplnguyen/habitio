@@ -1,6 +1,19 @@
 .datepicker__container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
+  font-size: var(--normal-font-size);
+}
+
+.today__link {
+  text-decoration: none;
+  /* color: var(--first-color-darkest); */
+  margin: 0;
+  padding: 0;
+}
+
+.datepicker__icon:active {
+  color: var(--first-color-light);
 }

@@ -4,7 +4,7 @@ import "./DatePicker.css";
 
 export default function DatePicker() {
 
-  const iconSize = 28;
+  const iconSize = 50;
   const [date, setDate] = useState(new Date());
 
   const handlePreviousDate = () => {
@@ -25,24 +25,24 @@ export default function DatePicker() {
 
   // change date format to "mm dd, yyyy" which is "January 1, 2021"
   const formatDate = (date) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
+    const options = { year: "numeric", month: "short", day: "numeric" };
     return date.toLocaleDateString(undefined, options);
   };
 
 
   return (
     <div className="datepicker__container">
-      <a href="#last_day" onClick={handlePreviousDate}>
+      <a href="#last_day" onClick={handlePreviousDate} className="today__link">
         <UilAngleLeft size={iconSize} className="datepicker__icon" />
       </a>
       <span> {date.toDateString() === new Date().toDateString() ? "Today" : formatDate(date)} </span>
       {/* <a href="#today" onClick={handleTodayDate}>Today</a> */}
-      <a href="#next_day" onClick={handleNextDate}>
+      <a href="#next_day" onClick={handleNextDate} className="today__link">
         <UilAngleRight size={iconSize} className="datepicker__icon" />
       </a>
 
       {date.toDateString() !== new Date().toDateString() && (
-        <a href="#today_day" onClick={handleTodayDate}>
+        <a href="#today_day" onClick={handleTodayDate} className="today__link">
           <UilSunset size={iconSize} className="datepicker__icon" />
         </a>
       )}
