@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./UserNavBar.css";
-import { Today } from "../";
+import { Today, Discover } from "../";
 
 import navData from "./UserNavData.js";
 
@@ -24,6 +24,7 @@ export default function UserNavBar() {
     <>
       <div className="tab__container">
         {active === "today" && <Today />}
+        {active === "discover" && <Discover />}
       </div>
       <nav className="nav__container">
         <div className="nav__menu" id="nav__list">

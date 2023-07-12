@@ -9,6 +9,7 @@ import Home from "./Home/Home";
 
 // User Interface Components
 import Today from "./UserInterface/Today";
+import Discover from "./UserInterface/Discover";
 
 export {
   InputField,
@@ -21,5 +22,6 @@ export {
   Home,
 
   // User Interface Components
-  Today
+  Today,
+  Discover
 }
